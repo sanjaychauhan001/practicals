@@ -139,7 +139,8 @@ ans<- optim(fn=nll.exp,par=c(rate=2),method="BFGS")
 ans$par
 
 # for gamma
-x<- rgamma(50,shape=2,scale = 1)
+N<- 50
+x<- rgamma(N,shape=2,scale = 1)
 50/sum(x)#mle
 nll.gamma<- function(shape,scale)
 {
